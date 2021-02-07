@@ -1,0 +1,26 @@
+
+
+Three of the studies are of "NCCT Head" type , while the other three studies are of "Cerebrum Seq  4.8  H31s" type.
+
+Third patient has 2 series of 2 diffrent types - first "5/5 mm Plain" as of other patients with "NCCT Head" study,
+and the second series is "Thin Plain" type. I guess The CT technicion found something that requies extra observation,
+or the paitient's neurologist asked for extra series scans.
+
+1_2_840_113619_2_337_3_2831186181_442_1421722000_421 :
+No brain image
+
+1_2_840_113619_2_337_3_2831186181_704_1420253349_16:
+Some of brain images tend to right
+
+1_2_840_113619_2_337_3_2831186181_801_1414550448_623:
+Has two series: "5/5 mm Plain" type , "Thin Plain" type
+
+1_3_12_2_1107_5_1_4_0_30000016080509452051500000829:
+7 dark Images only
+
+1_3_12_2_1107_5_1_4_0_30000016082001341060900000787:
+Brain images seem to be not clear in comparison to other patients' scans
+
+
+
+
