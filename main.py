@@ -80,9 +80,9 @@ def CT_Duration_option2():
     for root, dirs, files in os.walk('data'):
         if len(files)>0:
             ds_1 = pydicom.read_file(os.path.join(root, files[0]), force=True)
-            duration=float(ds_1[0x0008,0x0031].value)-float(ds_1[0x0008,0x0030].value)
+            duration=float(ds_1[0x0008,0x0031].value)-float(ds_1[0x0008,0x0030].value) #series time (Time the series started- takes 1-2 seconds) minus study time (Time the Study started)
             durations.append(duration)
-    print("CT scan AVG. duration (option 2): {:.2f} minutes".format(statistics.mean(durations))) # I think CT scan won't take more than 30 minutes 
+    print("CT scan AVG. duration (option 2): {:.2f} minutes".format(statistics.mean(durations))) # I think this is the answer because 
 
 
 def numOfHospials():
