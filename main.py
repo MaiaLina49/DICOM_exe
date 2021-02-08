@@ -70,10 +70,12 @@ def patientList():
 def CT_Duration_option1():
     exposure=[]
     for root, dirs, files in os.walk('data'):
-        if len(files)>0:
-            ds = pydicom.read_file(os.path.join(root, files[0]), force=True)
-            exposure.append(ds.get("ExposureTime"))
-    print("CT scan AVG. duration (option 1): {:.2f} seconds".format(statistics.mean(exposure)/1000))    # I'm not sure this is the answer for whole CT scan , I think the answer should be a few minutes 
+        sum=0
+        for file in files:
+            ds = pydicom.read_file(os.path.join(root, file), force=True)
+            sum+=ds.get("ExposureTime")
+        exposure.append(sum)
+    print("CT scan AVG. duration (option 1): {:.2f} seconds".format(statistics.mean(exposure)/1000))     
 
 def CT_Duration_option2():
     durations=[]
@@ -82,7 +84,7 @@ def CT_Duration_option2():
             ds_1 = pydicom.read_file(os.path.join(root, files[0]), force=True)
             duration=float(ds_1[0x0008,0x0031].value)-float(ds_1[0x0008,0x0030].value) #series time (Time the series started- takes 1-2 seconds) minus study time (Time the Study started)
             durations.append(duration)
-    print("CT scan AVG. duration (option 2): {:.2f} minutes".format(statistics.mean(durations))) # I think this is the answer because 
+    print("CT scan AVG. duration (option 2): {:.2f} minutes".format(statistics.mean(durations)))
 
 
 def numOfHospials():
