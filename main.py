@@ -99,8 +99,8 @@ def numOfHospials():
       
 
 if __name__=="__main__":
-    #dataDownload()
-    #arrangeFiles()
+    dataDownload()
+    arrangeFiles()
     patientList()
     CT_Duration_option1()
     CT_Duration_option2()
